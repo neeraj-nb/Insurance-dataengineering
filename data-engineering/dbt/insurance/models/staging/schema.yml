@@ -1,0 +1,33 @@
+version: 2
+
+models:
+  - name: stg_customer
+    description: "Staging table: cleaned customer records."
+    columns:
+      - name: customer_number
+        tests:
+          - not_null
+          - unique
+      - name: email
+        tests:
+          - not_null
+          - email_format:
+              column_name: email
+              config:
+                severity: warn
+  - name: stg_policy
+    description: "Staging table: cleaned policy definitions."
+    columns:
+      - name: policy_code
+        tests:
+          - not_null
+          - unique
+      - name: policy_name
+        tests:
+          - not_null
+  - name: stg_purchase
+    description: "Staging table: cleaned purchase events"
+    columns:
+      - name: purchase_number
+        tests:
+          - not_null

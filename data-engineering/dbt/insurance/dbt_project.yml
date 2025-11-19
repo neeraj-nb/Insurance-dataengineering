@@ -43,3 +43,6 @@ models:
     staging:
       +schema: staging
       +materialized: view
+
+    target:
+      +schema: target
