@@ -1,0 +1,4 @@
+dbt-core
+dbt-postgres
+dbt-redshift
+dbt-duckdb

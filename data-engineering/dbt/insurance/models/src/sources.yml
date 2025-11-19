@@ -1,0 +1,9 @@
+version: 2
+
+sources:
+  - name: raw_insurance
+    schema: "{{ target.schema }}"     # or explicit schema where seeds were loaded
+    tables:
+      - name: customer
+      - name: policy
+      - name: purchase
